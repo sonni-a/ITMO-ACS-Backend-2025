@@ -1,0 +1,16 @@
+import { DataSource } from 'typeorm';
+import { Workout } from '../entities/Workout';
+import { Category } from '../entities/Category';
+import { WorkoutCategory } from '../entities/WorkoutCategory';
+
+export const AppDataSource = new DataSource({
+  type: 'mysql',
+  host: 'localhost',
+  port: 3306,
+  username: 'root',
+  password: 'mysql', 
+  database: 'workout_db', 
+  synchronize: true,
+  logging: false,
+  entities: [Workout, Category, WorkoutCategory],
+});
