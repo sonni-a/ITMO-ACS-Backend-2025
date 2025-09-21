@@ -19,7 +19,7 @@ jobs:
         host: ${{ secrets.SERVER_IP }}
         username: ${{ secrets.SERVER_USER }}
         key: ${{ secrets.SERVER_SSH_KEY }}
-        source: "microservices/*"
+        source: "БР2/Мельник_Софья/homeworks/hw6/microservices/*"
         target: "~/microservices/microservices"
 
     - name: Run Docker Compose on server
